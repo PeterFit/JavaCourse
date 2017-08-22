@@ -3,17 +3,27 @@ package com.epam.main.java.se01.task1;
 public class Division {
     public static void main(String[] args) {
         try {
-            // Necessary to use IF to check "Division by 0"
-            if (Double.parseDouble(args[1]) == 0) {
-                throw new IllegalArgumentException();
+            // Number of parameters checkout
+            if (args.length != 2) {
+                throw new IllegalArgumentException("Error: Only 2 parameters are allowed.");
             }
-            
-            double result = Double.parseDouble(args[0]) / Double.parseDouble(args[1]);
-            System.out.println(args[0] + " / " + args[1] + " = " + result);
+
+            // "Division by 0" checkout
+            if (Double.parseDouble(args[1]) == 0) {
+                throw new IllegalArgumentException("Error: Division by 0");
+            }
+
+            // Parsing parameters into double
+            double first = Double.parseDouble(args[0]);
+            double second = Double.parseDouble(args[1]);
+
+            // Print result
+            System.out.print(args[0] + " / " + args[1] + " = ");
+            System.out.println(first / second);
         } catch (NumberFormatException exc) {
             System.out.println("Error: Only numbers are allowed.");
         } catch (IllegalArgumentException exc) {
-            System.out.println("Error: Division by 0");
+            System.out.println(exc.getMessage());
         }
     }
 }
