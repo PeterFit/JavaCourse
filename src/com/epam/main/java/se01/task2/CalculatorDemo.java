@@ -14,7 +14,7 @@ public class CalculatorDemo {
         //Show menu until action is selected
         do {
             calculator.showMenu();
-            action = sc.nextLine();
+            action = sc.nextLine().trim();
         } while (!calculator.isValidAction(action));
 
         printResult(calculator.doAction(action));
