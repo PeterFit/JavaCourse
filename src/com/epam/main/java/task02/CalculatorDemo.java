@@ -1,4 +1,4 @@
-package com.epam.main.java.se01.task2;
+package com.epam.main.java.task02;
 
 import java.io.IOException;
 import java.util.Scanner;

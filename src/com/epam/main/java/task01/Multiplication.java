@@ -1,6 +1,6 @@
-package com.epam.main.java.se01.task1;
+package com.epam.main.java.task01;
 
-public class Sum {
+public class Multiplication {
     public static void main(String[] args) {
         try {
             // Number of parameters checkout
@@ -13,8 +13,8 @@ public class Sum {
             double second = Double.parseDouble(args[1]);
 
             // Print result
-            System.out.print(args[0] + " + " + args[1] + " = ");
-            System.out.println(first + second);
+            System.out.print(args[0] + " * " + args[1] + " = ");
+            System.out.println(first * second);
         } catch (NumberFormatException exc) {
             System.out.println("Error: Only numbers are allowed.");
         } catch (IllegalArgumentException exc) {
